@@ -14,9 +14,9 @@ Another rating view to share your **feelings**.
 
 # ToDos:
 
-- [ ] Customization Options.
-- [ ] Customize Fonts, Text/ Background.
-- [ ] Code Refactoring.
+- [x] Customization Options.
+- [x] Customize Fonts, Text/ Background.
+- [x] Code Refactoring.
 
 You can [watch](https://github.com/hemangshah/Feelings/subscription) to **Feelings** to see continuous updates. Stay tuned.
 
