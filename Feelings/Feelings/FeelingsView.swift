@@ -34,18 +34,16 @@ public class FeelingsView : UIView {
     @IBInspectable public var feelingsButtonsBackgroundColor:UIColor?
     
     //fill Image (Uses to show radio button selection)
-    @IBInspectable fileprivate var fillImage:UIImage?
+    @IBInspectable public var fillImage:UIImage? = nil
     //unfillImage Image (Uses to show radio button not selected)
-    @IBInspectable fileprivate var unfillImage:UIImage?
+    @IBInspectable public var unfillImage:UIImage? = nil
     
     //Completion Block to Detect selection of Feelings value (row,column).
     public var onFilledCompletion:((_ row:Int, _ column:Int) -> ())? = nil
     
     //MARK:Init
-    init(withFrame frame:CGRect, withFillImage fImage:UIImage, withUnFillImage unFImage:UIImage) {
+    init(withFrame frame:CGRect) {
         super.init(frame: frame)
-        self.fillImage = fImage
-        self.unfillImage = unFImage
         //By default, you can customize it to your wish.
         self.backgroundColor = .clear
     }
@@ -167,6 +165,15 @@ public class FeelingsView : UIView {
     //MARK: Reload Feelings View
     ///FeelingsView should be reload after setting rows and columns titles.
     public func reloadFeelingView() -> Void {
+        guard fillImage != nil || unfillImage != nil else {
+            print("You forgot to provide fillImage or unfillImage.")
+            return
+        }
+        
+        guard rowTitles.count > 0 && columnTitles.count > 0 else {
+            print("You forgot to provide rowTitles or columnTitles values.")
+            return
+        }
         createRows()
         createColumns()
         createFeelings()

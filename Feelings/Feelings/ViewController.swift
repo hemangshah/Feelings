@@ -19,13 +19,17 @@ class ViewController: UIViewController {
         let columns = ["1 Star","2 Star","3 Star","4 Star","5 Star"]
         
         //Create FeelingsView
-        //Note: You should provide two images for FeelingsView. 1. Filled and 2. Unfilled        
-        let viewFeeling = FeelingsView.init(withFrame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0), withFillImage: UIImage.init(named: "filled.png")!, withUnFillImage: UIImage.init(named: "unfilled.png")!)
+        //Note: You should provide two images for FeelingsView. 1. Filled and 2. Unfilled
+        let viewFeeling = FeelingsView.init(withFrame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
         viewFeeling.backgroundColor = UIColor.clear
         self.view.addSubview(viewFeeling)
         viewFeeling.center = self.view.center
         
-        //Setting up values for Feelings
+        //Setting fill/unfill images for FeelingsView
+        viewFeeling.fillImage = UIImage.init(named: "filled.png")!
+        viewFeeling.unfillImage = UIImage.init(named: "unfilled.png")!
+        
+        //Setting up values for FeelingsView
         viewFeeling.columnTitles = columns
         viewFeeling.rowTitles = rows
         
