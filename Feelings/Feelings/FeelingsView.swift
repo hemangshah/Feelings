@@ -19,6 +19,19 @@ public class FeelingsView : UIView {
     ///rowTitles of Type Array<String>
     public var rowTitles = Array<String>()
     
+    //Fonts
+    public var rowTitleFont:UIFont?
+    public var columnTitleFont:UIFont?
+    
+    //Colors
+    public var rowTitleColor:UIColor?
+    public var columnTitleColor:UIColor?
+    
+    //Background Colors
+    public var rowTitleBackgroundColor:UIColor?
+    public var columnTitleBackgroundColor:UIColor?
+    public var feelingsButtonsBackgroundColor:UIColor?
+    
     //fill Image (Uses to show radio button selection)
     fileprivate var fillImage:UIImage?
     //unfillImage Image (Uses to show radio button not selected)
@@ -50,6 +63,15 @@ public class FeelingsView : UIView {
         for index in 0..<self.rowTitles.count {
             let rowLabel = createLabel(withFrame: CGRect.init(x: rowLabelPointX, y: rowLabelPointY, width: leftMarginForRows, height: dynamicHeight), text: rowTitles[index], font: UIFont.boldSystemFont(ofSize: 12.0), textColor: .black, textAlignment: .center)
             rowLabel.numberOfLines = 2
+            if let rowTitleColor = rowTitleColor {
+                rowLabel.textColor = rowTitleColor
+            }
+            if let rowTitleBackgroundColor = rowTitleBackgroundColor {
+                rowLabel.backgroundColor = rowTitleBackgroundColor
+            }
+            if let rowTitleFont = rowTitleFont {
+                rowLabel.font = rowTitleFont
+            }
             self.addSubview(rowLabel)
             rowLabelPointY = rowLabelPointY + dynamicHeight
         }
@@ -64,6 +86,15 @@ public class FeelingsView : UIView {
         for index in 0..<self.columnTitles.count {
             let columnLabel = createLabel(withFrame: CGRect.init(x: columnLabelPointX, y: columnLabelPointY, width: dynamicWidth, height: topMarginForColumns), text: columnTitles[index], font: UIFont.boldSystemFont(ofSize: 12.0), textColor: .black, textAlignment: .center)
             columnLabel.numberOfLines = 2
+            if let columnTitleColor = columnTitleColor {
+                columnLabel.textColor = columnTitleColor
+            }
+            if let columnTitleBackgroundColor = columnTitleBackgroundColor {
+                columnLabel.backgroundColor = columnTitleBackgroundColor
+            }
+            if let columnTitleFont = columnTitleFont {
+                columnLabel.font = columnTitleFont
+            }
             self.addSubview(columnLabel)
             columnLabelPointX = columnLabelPointX + dynamicWidth
         }
@@ -91,6 +122,9 @@ public class FeelingsView : UIView {
                 feelingsButton.setImage(unfillImage!, for: .normal)
                 feelingsButton.setImage(fillImage!, for: .selected)
                 feelingsButton.backgroundColor = .clear
+                if let feelingsButtonsBackgroundColor = feelingsButtonsBackgroundColor {
+                    feelingsButton.backgroundColor = feelingsButtonsBackgroundColor
+                }
                 rowView.addSubview(feelingsButton)
                 feelingsButtonPointX = feelingsButtonPointX + dynamicWidth
             }
