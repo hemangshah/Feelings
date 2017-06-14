@@ -13,11 +13,11 @@
 		F1E9616B1EF11B49002A31B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E9616A1EF11B49002A31B1 /* Assets.xcassets */; };
 		F1E9616E1EF11B49002A31B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E9616C1EF11B49002A31B1 /* LaunchScreen.storyboard */; };
 		F1E961761EF11BAE002A31B1 /* FeelingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E961751EF11BAE002A31B1 /* FeelingsView.swift */; };
-		F1E961791EF12F0D002A31B1 /* unfilled.png in Resources */ = {isa = PBXBuildFile; fileRef = F1E961771EF12F0D002A31B1 /* unfilled.png */; };
-		F1E9617A1EF12F0D002A31B1 /* filled.png in Resources */ = {isa = PBXBuildFile; fileRef = F1E961781EF12F0D002A31B1 /* filled.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F11C132E1EF13CD9000FA68D /* filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filled.png; sourceTree = "<group>"; };
+		F11C132F1EF13CD9000FA68D /* unfilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfilled.png; sourceTree = "<group>"; };
 		F1E961601EF11B49002A31B1 /* Feelings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feelings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E961631EF11B49002A31B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E961651EF11B49002A31B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +26,6 @@
 		F1E9616D1EF11B49002A31B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1E9616F1EF11B49002A31B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1E961751EF11BAE002A31B1 /* FeelingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsView.swift; sourceTree = "<group>"; };
-		F1E961771EF12F0D002A31B1 /* unfilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unfilled.png; path = ../../../Downloads/unfilled.png; sourceTree = "<group>"; };
-		F1E961781EF12F0D002A31B1 /* filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filled.png; path = ../../../Downloads/filled.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +58,8 @@
 		F1E961621EF11B49002A31B1 /* Feelings */ = {
 			isa = PBXGroup;
 			children = (
-				F1E961781EF12F0D002A31B1 /* filled.png */,
-				F1E961771EF12F0D002A31B1 /* unfilled.png */,
+				F11C132E1EF13CD9000FA68D /* filled.png */,
+				F11C132F1EF13CD9000FA68D /* unfilled.png */,
 				F1E961751EF11BAE002A31B1 /* FeelingsView.swift */,
 				F1E961631EF11B49002A31B1 /* AppDelegate.swift */,
 				F1E961651EF11B49002A31B1 /* ViewController.swift */,
@@ -133,8 +131,6 @@
 			files = (
 				F1E9616E1EF11B49002A31B1 /* LaunchScreen.storyboard in Resources */,
 				F1E9616B1EF11B49002A31B1 /* Assets.xcassets in Resources */,
-				F1E9617A1EF12F0D002A31B1 /* filled.png in Resources */,
-				F1E961791EF12F0D002A31B1 /* unfilled.png in Resources */,
 				F1E961691EF11B49002A31B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
