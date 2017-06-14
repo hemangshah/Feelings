@@ -8,25 +8,32 @@
 
 import UIKit
 
+//You can change this value accordingly and it will update the entire FeelingsView
 fileprivate let leftMarginForRows = 50.0
 fileprivate let topMarginForColumns = 50.0
-fileprivate let heightForRows = 30.0
 
 public class FeelingsView : UIView {
     
+    ///columnTitles of Type Array<String>
     public var columnTitles = Array<String>()
+    ///rowTitles of Type Array<String>
     public var rowTitles = Array<String>()
-    public var fillImage:UIImage?
-    public var unfillImage:UIImage?
     
-    public var onFilledCompletion:((_ row:Int, _ columns:Int) -> ())? = nil
+    //fill Image (Uses to show radio button selection)
+    fileprivate var fillImage:UIImage?
+    //unfillImage Image (Uses to show radio button not selected)
+    fileprivate var unfillImage:UIImage?
+    
+    //Completion Block to Detect selection of Feelings value (row,column).
+    public var onFilledCompletion:((_ row:Int, _ column:Int) -> ())? = nil
     
     //MARK:Init
     init(withFrame frame:CGRect, withFillImage fImage:UIImage, withUnFillImage unFImage:UIImage) {
         super.init(frame: frame)
         self.fillImage = fImage
         self.unfillImage = unFImage
-        self.backgroundColor = .white
+        //By default, you can customize it to your wish.
+        self.backgroundColor = .clear
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -109,13 +116,6 @@ public class FeelingsView : UIView {
         }
     }
     
-    //MARK: Reload Feelings View
-    public func reloadFeelingView() -> Void {
-        createRows()
-        createColumns()
-        createFeelings()
-    }
-    
     //MARK: Create Label
     fileprivate func createLabel(withFrame frame:CGRect, text:String, font:UIFont, textColor:UIColor, textAlignment:NSTextAlignment) -> UILabel {
         let label = UILabel.init(frame: frame)
@@ -127,5 +127,13 @@ public class FeelingsView : UIView {
         label.minimumScaleFactor = (UIFont.labelFontSize/2)/UIFont.labelFontSize
         label.adjustsFontSizeToFitWidth = true
         return label
+    }
+    
+    //MARK: Reload Feelings View
+    ///FeelingsView should be reload after setting rows and columns titles.
+    public func reloadFeelingView() -> Void {
+        createRows()
+        createColumns()
+        createFeelings()
     }
 }
