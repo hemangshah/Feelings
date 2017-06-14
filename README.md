@@ -20,10 +20,14 @@ Another rating view to share your **feelings**.
         
     //Create FeelingsView
     //Note: You should provide two images for FeelingsView. 1. Filled and 2. Unfilled        
-    let viewFeeling = FeelingsView.init(withFrame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0), withFillImage: UIImage.init(named: "filled.png")!, withUnFillImage: UIImage.init(named: "unfilled.png")!)
+    let viewFeeling = FeelingsView.init(withFrame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
     viewFeeling.backgroundColor = UIColor.clear
     self.view.addSubview(viewFeeling)
     viewFeeling.center = self.view.center
+    
+    //Setting fill/unfill images for FeelingsView
+    viewFeeling.fillImage = UIImage.init(named: "filled.png")!
+    viewFeeling.unfillImage = UIImage.init(named: "unfilled.png")!
         
     //Setting up values for Feelings
     viewFeeling.columnTitles = columns
