@@ -27,22 +27,8 @@ Another rating view to share your **feelings**.
         
     //Setting up values for Feelings
     viewFeeling.columnTitles = columns
-    viewFeeling.rowTitles = rows
-        
-    //Customization Options
-    //viewFeeling.backgroundColor = .red
-        
-    //viewFeeling.rowTitleColor = .white
-    //viewFeeling.columnTitleColor = .white
-        
-    //viewFeeling.rowTitleFont = UIFont.init(name: "Verdana", size: 14.0)
-    //viewFeeling.columnTitleFont = UIFont.init(name: "Helvetica", size: 14.0)
-        
-    //viewFeeling.rowTitleBackgroundColor = .red
-    //viewFeeling.columnTitleBackgroundColor = .red
-        
-    //viewFeeling.feelingsButtonsBackgroundColor = .white
-        
+    viewFeeling.rowTitles = rows 
+    
     //Reload
     viewFeeling.reloadFeelingView()
         
@@ -53,6 +39,8 @@ Another rating view to share your **feelings**.
         let columnValue = columns[column]
         print("\(rowValue) -> \(columnValue)")
     }
+    
+> For customization see the example project.
 
 # ToDos:
 
