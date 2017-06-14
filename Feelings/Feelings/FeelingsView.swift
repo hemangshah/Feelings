@@ -12,6 +12,7 @@ import UIKit
 fileprivate let leftMarginForRows = 50.0
 fileprivate let topMarginForColumns = 50.0
 
+@IBDesignable
 public class FeelingsView : UIView {
     
     ///columnTitles of Type Array<String>
@@ -20,22 +21,22 @@ public class FeelingsView : UIView {
     public var rowTitles = Array<String>()
     
     //Fonts
-    public var rowTitleFont:UIFont?
-    public var columnTitleFont:UIFont?
+    @IBInspectable public var rowTitleFont:UIFont?
+    @IBInspectable public var columnTitleFont:UIFont?
     
     //Colors
-    public var rowTitleColor:UIColor?
-    public var columnTitleColor:UIColor?
+    @IBInspectable public var rowTitleColor:UIColor?
+    @IBInspectable public var columnTitleColor:UIColor?
     
     //Background Colors
-    public var rowTitleBackgroundColor:UIColor?
-    public var columnTitleBackgroundColor:UIColor?
-    public var feelingsButtonsBackgroundColor:UIColor?
+    @IBInspectable public var rowTitleBackgroundColor:UIColor?
+    @IBInspectable public var columnTitleBackgroundColor:UIColor?
+    @IBInspectable public var feelingsButtonsBackgroundColor:UIColor?
     
     //fill Image (Uses to show radio button selection)
-    fileprivate var fillImage:UIImage?
+    @IBInspectable fileprivate var fillImage:UIImage?
     //unfillImage Image (Uses to show radio button not selected)
-    fileprivate var unfillImage:UIImage?
+    @IBInspectable fileprivate var unfillImage:UIImage?
     
     //Completion Block to Detect selection of Feelings value (row,column).
     public var onFilledCompletion:((_ row:Int, _ column:Int) -> ())? = nil
@@ -50,7 +51,7 @@ public class FeelingsView : UIView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
     //MARK: Create Rows/Columns/Feelings
