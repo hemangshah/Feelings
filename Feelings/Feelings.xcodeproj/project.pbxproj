@@ -16,8 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F11C132E1EF13CD9000FA68D /* filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filled.png; sourceTree = "<group>"; };
-		F11C132F1EF13CD9000FA68D /* unfilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfilled.png; sourceTree = "<group>"; };
 		F1E961601EF11B49002A31B1 /* Feelings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feelings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E961631EF11B49002A31B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E961651EF11B49002A31B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,8 +56,6 @@
 		F1E961621EF11B49002A31B1 /* Feelings */ = {
 			isa = PBXGroup;
 			children = (
-				F11C132E1EF13CD9000FA68D /* filled.png */,
-				F11C132F1EF13CD9000FA68D /* unfilled.png */,
 				F1E961751EF11BAE002A31B1 /* FeelingsView.swift */,
 				F1E961631EF11B49002A31B1 /* AppDelegate.swift */,
 				F1E961651EF11B49002A31B1 /* ViewController.swift */,
