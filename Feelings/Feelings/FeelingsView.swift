@@ -8,16 +8,18 @@
 
 import UIKit
 
-let leftMarginForRows = 50.0
-let topMarginForColumns = 50.0
-
-let heightForRows = 30.0
+fileprivate let leftMarginForRows = 50.0
+fileprivate let topMarginForColumns = 50.0
+fileprivate let heightForRows = 30.0
 
 public class FeelingsView : UIView {
+    
     public var columnTitles = Array<String>()
     public var rowTitles = Array<String>()
     public var fillImage:UIImage?
     public var unfillImage:UIImage?
+    
+    public var onFilledCompletion:((_ row:Int, _ columns:Int) -> ())? = nil
     
     //MARK:Init
     init(withFrame frame:CGRect, withFillImage fImage:UIImage, withUnFillImage unFImage:UIImage) {
@@ -31,6 +33,7 @@ public class FeelingsView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: Create Rows/Columns/Feelings
     fileprivate func createRows() -> Void {
         let rowLabelPointX:Double = 0.0
         var rowLabelPointY:Double = topMarginForColumns
@@ -91,15 +94,16 @@ public class FeelingsView : UIView {
     
     //MARK: Actions
     @objc fileprivate func actionFeelingsTapped(button:UIButton) -> Void {
-        unFilledEveryOneInRow(button: button)
         let rowView = button.superview!
-        print("Filled Row:\(rowView.tag) andColumn:\(button.tag)")
+        unFilledEveryOneInRow(button: button, withRowView: rowView)
         button.isSelected = !button.isSelected
+        if onFilledCompletion != nil {
+            onFilledCompletion!(rowView.tag-1, button.tag-1)
+        }
     }
     
     //MARK: Helpers
-    fileprivate func unFilledEveryOneInRow(button:UIButton) -> Void {
-        let rowView = button.superview!
+    fileprivate func unFilledEveryOneInRow(button:UIButton, withRowView rowView:UIView) -> Void {
         for case let feelingsButton as UIButton in rowView.subviews {
             feelingsButton.isSelected = false
         }

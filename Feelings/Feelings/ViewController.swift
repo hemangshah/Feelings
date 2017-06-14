@@ -28,6 +28,13 @@ class ViewController: UIViewController {
         
         //Reload
         viewFeeling.reloadFeelingView()
+        
+        //Detect selection of Feelings value
+        viewFeeling.onFilledCompletion = { (row,column) in
+            let rowValue = rows[row]
+            let columnValue = columns[column]
+            print("\(rowValue) -> \(columnValue)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
