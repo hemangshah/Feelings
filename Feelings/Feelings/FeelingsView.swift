@@ -103,7 +103,7 @@ public class FeelingsView : UIView {
     public var onFilledCompletion:((_ row:Int, _ column:Int) -> ())? = nil
     
     //MARK:Init
-    init(withFrame frame:CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         //By default, you can customize it to your wish.
         self.backgroundColor = .clear
