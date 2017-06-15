@@ -6,7 +6,7 @@ Another rating view to share your **feelings**.
 ![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 ![Platform](https://img.shields.io/badge/Platforms-iOS%209.0%20%E2%89%A5-red.svg)
 ![Swift 4.x](https://img.shields.io/badge/Swift-4.x-blue.svg)
-[![Swift 3.x](https://img.shields.io/badge/Swift-3.x-blue.svg)](#swiftsupport)
+[![Swift 3.x](https://img.shields.io/badge/Swift-3.x-blue.svg)](#looking-for-swift-3x-compatibility)
 ![MadeWithLove](https://img.shields.io/badge/Made%20with%20%E2%9D%A4-India-green.svg)
 [![Blog](https://img.shields.io/badge/Blog-iKiwiTech.com-blue.svg)](http://www.ikiwitech.com)
 
