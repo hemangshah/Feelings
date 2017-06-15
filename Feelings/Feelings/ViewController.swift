@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         viewFeeling.columnTitles = columns
         viewFeeling.rowTitles = rows
         
+        //Add animations when feelings button tapped.
+        //Pulse, Flash, Shake and None.
+        viewFeeling.feelingsButtonAnimationType = .Flash
+        
         //Customization Options
         //viewFeeling.backgroundColor = .red
         

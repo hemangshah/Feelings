@@ -8,9 +8,68 @@
 
 import UIKit
 
+//Credits for the Animation: [SeanAllen] https://gist.github.com/SAllen0400/a09754049fcdcc00695291b3a011fbbd
+
+fileprivate extension UIButton {
+    
+    func pulsate() {
+        
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.2
+        pulse.fromValue = 0.95
+        pulse.toValue = 1.0
+        pulse.autoreverses = true
+        pulse.repeatCount = 2
+        pulse.initialVelocity = 0.5
+        pulse.damping = 1.0
+        
+        layer.add(pulse, forKey: "pulse")
+    }
+    
+    func flash() {
+        
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 0.2
+        flash.fromValue = 1
+        flash.toValue = 0.1
+        flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 3
+        
+        layer.add(flash, forKey: nil)
+    }
+    
+    
+    func shake() {
+        
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.05
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        
+        let fromPoint = CGPoint(x: center.x - 5, y: center.y)
+        let fromValue = NSValue(cgPoint: fromPoint)
+        
+        let toPoint = CGPoint(x: center.x + 5, y: center.y)
+        let toValue = NSValue(cgPoint: toPoint)
+        
+        shake.fromValue = fromValue
+        shake.toValue = toValue
+        
+        layer.add(shake, forKey: "position")
+    }
+}
+
 //You can change this value accordingly and it will update the entire FeelingsView
 fileprivate let leftMarginForRows = 50.0
 fileprivate let topMarginForColumns = 50.0
+
+public enum FeelingsViewButtonTapAnimationType: Int {
+    case None
+    case Pulse
+    case Flash
+    case Shake
+}
 
 @IBDesignable
 public class FeelingsView : UIView {
@@ -19,6 +78,8 @@ public class FeelingsView : UIView {
     public var columnTitles = Array<String>()
     ///rowTitles of Type Array<String>
     public var rowTitles = Array<String>()
+    ///Animation Type for the Feelings Button Taps.
+    public var feelingsButtonAnimationType: FeelingsViewButtonTapAnimationType = .None
     
     //Fonts
     @IBInspectable public var rowTitleFont:UIFont?
@@ -134,6 +195,16 @@ public class FeelingsView : UIView {
     
     //MARK: Actions
     @objc fileprivate func actionFeelingsTapped(button:UIButton) -> Void {
+        if feelingsButtonAnimationType != .None {
+            if feelingsButtonAnimationType == .Pulse {
+                button.pulsate()
+            } else if feelingsButtonAnimationType == .Flash {
+                button.flash()
+            } else if feelingsButtonAnimationType == .Shake {
+                button.shake()
+            }
+        }
+        
         let rowView = button.superview!
         unFilledEveryOneInRow(button: button, withRowView: rowView)
         button.isSelected = !button.isSelected
