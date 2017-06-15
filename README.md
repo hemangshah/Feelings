@@ -12,7 +12,7 @@ Another rating view to share your **feelings**.
 
 <img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Screenshot-1.png">
 
-# SwiftSupport
+# Looking for Swift 3.x compatibility?
 
 You can find the Swift 3.x compatible code [here](https://github.com/hemangshah/Feelings/releases/tag/v.1.0).
 
