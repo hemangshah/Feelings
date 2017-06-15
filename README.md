@@ -14,6 +14,8 @@ Another rating view to share your **feelings**.
 
 # Usage:
 
+### Create Programmatically.
+
     //Create Sample Arrays
     let rows = ["Quality","Price","Value"]
     let columns = ["1 Star","2 Star","3 Star","4 Star","5 Star"]
@@ -46,11 +48,27 @@ Another rating view to share your **feelings**.
     
 > For customization see the example project.
 
+### Create in Storyboard/XIB.
+
+1. Add a `UIView`. Set your size. Add constraints if requires.
+
+2. Change class type from `UIView` to `FeelingsView`.
+<img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Usage-Screenshot-1.png">
+
+3. Apply the properties for `FeelingsView`.
+<img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Usage-Screenshot-2.png">
+
+4. Create an `IBOutlet` for `FeelingsView`. Bind it in `IBInspector`.
+
+5. In `viewDidLoad` or at anyplace where you want provide rows and columns titles.
+
+6. Reload `FeelingsView` by calling `reloadFeelingView` function.
+
+7. Detect the taps on `FeelingsView` by implementing `onFilledCompletion` closure block.
+
 # ToDos:
 
-- [x] Customization Options.
-- [x] Customize Fonts, Text/ Background.
-- [x] Code Refactoring.
+- [ ] CocoaPods support
 
 You can [watch](https://github.com/hemangshah/Feelings/subscription) to **Feelings** to see continuous updates. Stay tuned.
 
