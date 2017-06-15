@@ -26,7 +26,7 @@ You can find the Swift 3.x compatible code [here](https://github.com/hemangshah/
         
     //Create FeelingsView
     //Note: You should provide two images for FeelingsView. 1. Filled and 2. Unfilled        
-    let viewFeeling = FeelingsView.init(withFrame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
+    let viewFeeling = FeelingsView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
     viewFeeling.backgroundColor = UIColor.clear
     self.view.addSubview(viewFeeling)
     viewFeeling.center = self.view.center
