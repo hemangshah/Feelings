@@ -137,6 +137,7 @@ public class FeelingsView : UIView {
         let rowView = button.superview!
         unFilledEveryOneInRow(button: button, withRowView: rowView)
         button.isSelected = !button.isSelected
+        button.isUserInteractionEnabled = !button.isUserInteractionEnabled
         if onFilledCompletion != nil {
             onFilledCompletion!(rowView.tag-1, button.tag-1)
         }
@@ -146,6 +147,7 @@ public class FeelingsView : UIView {
     fileprivate func unFilledEveryOneInRow(button:UIButton, withRowView rowView:UIView) -> Void {
         for case let feelingsButton as UIButton in rowView.subviews {
             feelingsButton.isSelected = false
+            feelingsButton.isUserInteractionEnabled = true
         }
     }
     
