@@ -50,7 +50,7 @@ You can find the Swift 3.x compatible code [here](https://github.com/hemangshah/
         print("\(rowValue) -> \(columnValue)")
     }
     
-> For customization see the example project.
+> For customization see the [example](https://github.com/hemangshah/Feelings/blob/master/Feelings/Feelings/ViewController.swift).
 
 ### Create in Storyboard/XIB.
 
