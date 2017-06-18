@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         //Pulse, Flash, Shake and None.
         viewFeeling.feelingsButtonAnimationType = .Flash
         
+        //Default Feelings Value (from 1 up-to total columns count)
+        viewFeeling.defaultFeeligns = 5
+        
         //Customization Options
         //viewFeeling.backgroundColor = .red
         

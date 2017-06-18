@@ -80,6 +80,8 @@ public class FeelingsView : UIView {
     public var rowTitles = Array<String>()
     ///Animation Type for the Feelings Button Taps.
     public var feelingsButtonAnimationType: FeelingsViewButtonTapAnimationType = .None
+    ///Default Feelings Value.
+    public var defaultFeeligns:Int = -1
     
     //Fonts
     @IBInspectable public var rowTitleFont:UIFont?
@@ -187,6 +189,11 @@ public class FeelingsView : UIView {
                 }
                 rowView.addSubview(feelingsButton)
                 feelingsButtonPointX = feelingsButtonPointX + dynamicWidth
+                if defaultFeeligns >= 1 && defaultFeeligns <= columnTitles.count {
+                    if defaultFeeligns == (columnIndex + 1) {
+                        actionFeelingsTapped(button: feelingsButton)
+                    }
+                }
             }
             feelingsViewPointX = leftMarginForRows
             feelingsViewPointY = feelingsViewPointY + topMarginForColumns
