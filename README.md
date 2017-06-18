@@ -10,7 +10,7 @@ Another rating view to share your **feelings**.
 ![MadeWithLove](https://img.shields.io/badge/Made%20with%20%E2%9D%A4-India-green.svg)
 [![Blog](https://img.shields.io/badge/Blog-iKiwiTech.com-blue.svg)](http://www.ikiwitech.com)
 
-<img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Screenshot-1.png">
+<img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Usage.gif"/>
 
 # Looking for Swift 3.x compatibility?
 
