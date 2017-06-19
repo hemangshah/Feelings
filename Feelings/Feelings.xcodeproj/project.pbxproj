@@ -12,10 +12,10 @@
 		F1E961691EF11B49002A31B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E961671EF11B49002A31B1 /* Main.storyboard */; };
 		F1E9616B1EF11B49002A31B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E9616A1EF11B49002A31B1 /* Assets.xcassets */; };
 		F1E9616E1EF11B49002A31B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E9616C1EF11B49002A31B1 /* LaunchScreen.storyboard */; };
-		F1E961761EF11BAE002A31B1 /* FeelingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E961751EF11BAE002A31B1 /* FeelingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1309EEC1EF7A48500A788E1 /* FeelingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsView.swift; sourceTree = "<group>"; };
 		F1E961601EF11B49002A31B1 /* Feelings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feelings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E961631EF11B49002A31B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E961651EF11B49002A31B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +23,6 @@
 		F1E9616A1EF11B49002A31B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1E9616D1EF11B49002A31B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1E9616F1EF11B49002A31B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1E961751EF11BAE002A31B1 /* FeelingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1309EEB1EF7A48500A788E1 /* FeelingsView */ = {
+			isa = PBXGroup;
+			children = (
+				F1309EEC1EF7A48500A788E1 /* FeelingsView.swift */,
+			);
+			path = FeelingsView;
+			sourceTree = "<group>";
+		};
 		F1E961571EF11B49002A31B1 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +63,7 @@
 		F1E961621EF11B49002A31B1 /* Feelings */ = {
 			isa = PBXGroup;
 			children = (
-				F1E961751EF11BAE002A31B1 /* FeelingsView.swift */,
+				F1309EEB1EF7A48500A788E1 /* FeelingsView */,
 				F1E961631EF11B49002A31B1 /* AppDelegate.swift */,
 				F1E961651EF11B49002A31B1 /* ViewController.swift */,
 				F1E961671EF11B49002A31B1 /* Main.storyboard */,
@@ -141,7 +148,6 @@
 			files = (
 				F1E961661EF11B49002A31B1 /* ViewController.swift in Sources */,
 				F1E961641EF11B49002A31B1 /* AppDelegate.swift in Sources */,
-				F1E961761EF11BAE002A31B1 /* FeelingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
