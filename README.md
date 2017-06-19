@@ -14,7 +14,7 @@ Another rating view to share your **feelings**.
 
 # Looking for Swift 3.x compatibility?
 
-You can find the Swift 3.x compatible code [here](https://github.com/hemangshah/Feelings/releases/tag/v.1.0).
+You can find the Swift 3.x compatible code [here](https://github.com/hemangshah/Feelings/releases/tag/1.0).
 
 # Usage:
 
