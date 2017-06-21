@@ -8,6 +8,7 @@ Another rating view to share your **feelings**.
 ![Swift 3.x](https://img.shields.io/badge/Swift-4.x-blue.svg)
 ![MadeWithLove](https://img.shields.io/badge/Made%20with%20%E2%9D%A4-India-green.svg)
 [![Blog](https://img.shields.io/badge/Blog-iKiwiTech.com-blue.svg)](http://www.ikiwitech.com)
+[![Awesome-Swift](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/matteocrippa/awesome-swift/)
 
 <img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Usage.gif"/>
 
