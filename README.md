@@ -11,6 +11,20 @@ Another rating view to share your **feelings**.
 
 <img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Usage.gif"/>
 
+## Installation
+
+> **IMPORTANT**: You will need two images, one is filled and another is unfilled to represents feelings. See this sample images for the same, check it [here](https://github.com/hemangshah/Feelings/tree/master/Feelings/Feelings/Assets.xcassets).
+
+1.**Manually** - Add `FeelingsView.swift` class to your Project. All set.
+
+2.**CocoaPods**:
+
+    source 'https://github.com/CocoaPods/Specs.git'
+    target 'Sample' do
+    use_frameworks!
+    pod 'FeelingsView', '~>1.0'
+    end
+    
 # Usage:
 
 ### Create Programmatically.
@@ -45,11 +59,11 @@ Another rating view to share your **feelings**.
         print("\(rowValue) -> \(columnValue)")
     }
     
-> For customization see the [example](https://github.com/hemangshah/Feelings/blob/master/Feelings/Feelings/ViewController.swift).
+> **IMPORTANT**: For customizations see the [example](https://github.com/hemangshah/Feelings/blob/master/Feelings/Feelings/ViewController.swift).
 
 ### Create in Storyboard/XIB.
 
-1. Add a `UIView`. Set your size. Add constraints if requires.
+1. Add a `UIView`. Set require size. Add constraints if requires.
 
 2. Change class type from `UIView` to `FeelingsView`.
 <img src="https://github.com/hemangshah/Feelings/blob/master/Screenshots/Usage-Screenshot-1.png">
@@ -67,7 +81,7 @@ Another rating view to share your **feelings**.
 
 # ToDos:
 
-- [ ] CocoaPods support
+- [x] CocoaPods support
 
 You can [watch](https://github.com/hemangshah/Feelings/subscription) to **Feelings** to see continuous updates. Stay tuned.
 
