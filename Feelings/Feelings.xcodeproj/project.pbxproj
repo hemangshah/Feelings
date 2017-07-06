@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F13F7BE11F0DFA3B00DF79FC /* FeelingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F7BE01F0DFA2A00DF79FC /* FeelingsView.swift */; };
 		F1E961641EF11B49002A31B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E961631EF11B49002A31B1 /* AppDelegate.swift */; };
 		F1E961661EF11B49002A31B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E961651EF11B49002A31B1 /* ViewController.swift */; };
 		F1E961691EF11B49002A31B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E961671EF11B49002A31B1 /* Main.storyboard */; };
@@ -15,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F1309EEC1EF7A48500A788E1 /* FeelingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsView.swift; sourceTree = "<group>"; };
+		F13F7BE01F0DFA2A00DF79FC /* FeelingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsView.swift; sourceTree = "<group>"; };
 		F1E961601EF11B49002A31B1 /* Feelings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feelings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E961631EF11B49002A31B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E961651EF11B49002A31B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,12 +37,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F1309EEB1EF7A48500A788E1 /* FeelingsView */ = {
+		F13F7BDF1F0DFA2A00DF79FC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F1309EEC1EF7A48500A788E1 /* FeelingsView.swift */,
+				F13F7BE01F0DFA2A00DF79FC /* FeelingsView.swift */,
 			);
-			path = FeelingsView;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		F1E961571EF11B49002A31B1 = {
@@ -63,7 +64,7 @@
 		F1E961621EF11B49002A31B1 /* Feelings */ = {
 			isa = PBXGroup;
 			children = (
-				F1309EEB1EF7A48500A788E1 /* FeelingsView */,
+				F13F7BDF1F0DFA2A00DF79FC /* Source */,
 				F1E961631EF11B49002A31B1 /* AppDelegate.swift */,
 				F1E961651EF11B49002A31B1 /* ViewController.swift */,
 				F1E961671EF11B49002A31B1 /* Main.storyboard */,
@@ -146,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13F7BE11F0DFA3B00DF79FC /* FeelingsView.swift in Sources */,
 				F1E961661EF11B49002A31B1 /* ViewController.swift in Sources */,
 				F1E961641EF11B49002A31B1 /* AppDelegate.swift in Sources */,
 			);

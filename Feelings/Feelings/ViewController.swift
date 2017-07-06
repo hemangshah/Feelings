@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         //Note: You should provide two images for FeelingsView. 1. Filled and 2. Unfilled
         let viewFeeling = FeelingsView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
         viewFeeling.backgroundColor = UIColor.clear
+        viewFeeling.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
         self.view.addSubview(viewFeeling)
         viewFeeling.center = self.view.center
         
