@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = 'FeelingsView'
 s.module_name      = 'FeelingsView'
-s.version          = '2.0'
+s.version          = '1.1'
 s.summary          = 'Another rating view to share your feelings. 🎭'
 s.description      = 'Want to create a feedback view for your business. Feelings would be the best choise to add in your next iOS app.'
 s.homepage         = 'https://github.com/hemangshah/Feelings'
