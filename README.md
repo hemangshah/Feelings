@@ -81,7 +81,7 @@ Another rating view to share your **feelings**.
 
 7. Detect the taps on `FeelingsView` by implementing `onFilledCompletion` closure block.
 
-# ToDos:
+# ToDo[s]
 
 - [x] CocoaPods support
 
