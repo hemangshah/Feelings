@@ -23,7 +23,7 @@ Another rating view to share your **feelings**.
     source 'https://github.com/CocoaPods/Specs.git'
     target 'Sample' do
     use_frameworks!
-    pod 'FeelingsView', '~>1.1'
+    pod 'FeelingsView'
     end
     
 # Usage:
