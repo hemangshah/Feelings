@@ -18,14 +18,8 @@ Another rating view to share your **feelings**.
 
 1.**Manually** - Add `FeelingsView.swift` class to your Project. All set.
 
-2.**CocoaPods**:
+2.**CocoaPods**: `pod 'FeelingsView'`
 
-    source 'https://github.com/CocoaPods/Specs.git'
-    target 'Sample' do
-    use_frameworks!
-    pod 'FeelingsView'
-    end
-    
 # Usage:
 
 ### Create Programmatically.
