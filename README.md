@@ -30,36 +30,38 @@ Another rating view to share your **feelings**.
 
 ### Create Programmatically.
 
-    //Create Sample Arrays
-    let rows = ["Quality","Price","Value"]
-    let columns = ["1 Star","2 Star","3 Star","4 Star","5 Star"]
+````swift
+//Create Sample Arrays
+let rows = ["Quality","Price","Value"]
+let columns = ["1 Star","2 Star","3 Star","4 Star","5 Star"]
         
-    //Create FeelingsView
-    //Note: You should provide two images for FeelingsView. 1. Filled and 2. Unfilled        
-    let viewFeeling = FeelingsView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
-    viewFeeling.backgroundColor = UIColor.clear
-    viewFeeling.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
-    self.view.addSubview(viewFeeling)
-    viewFeeling.center = self.view.center
+//Create FeelingsView
+//Note: You should provide two images for FeelingsView. 1. Filled and 2. Unfilled        
+let viewFeeling = FeelingsView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: 300.0, height: 200.0))
+viewFeeling.backgroundColor = UIColor.clear
+viewFeeling.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+self.view.addSubview(viewFeeling)
+viewFeeling.center = self.view.center
     
-    //Setting fill/unfill images for FeelingsView
-    viewFeeling.fillImage = UIImage.init(named: "filled.png")!
-    viewFeeling.unfillImage = UIImage.init(named: "unfilled.png")!
+//Setting fill/unfill images for FeelingsView
+viewFeeling.fillImage = UIImage.init(named: "filled.png")!
+viewFeeling.unfillImage = UIImage.init(named: "unfilled.png")!
         
-    //Setting up values for Feelings
-    viewFeeling.columnTitles = columns
-    viewFeeling.rowTitles = rows 
+//Setting up values for Feelings
+viewFeeling.columnTitles = columns
+viewFeeling.rowTitles = rows 
     
-    //Reload
-    viewFeeling.reloadFeelingView()
+//Reload
+viewFeeling.reloadFeelingView()
         
-    //Detect selection of Feelings value
-    viewFeeling.onFilledCompletion = { (row,column) in
-        //Note: row and column are the Int which a user tapped in the FeelingsView
-        let rowValue = rows[row]
-        let columnValue = columns[column]
-        print("\(rowValue) -> \(columnValue)")
-    }
+//Detect selection of Feelings value
+viewFeeling.onFilledCompletion = { (row,column) in
+    //Note: row and column are the Int which a user tapped in the FeelingsView
+    let rowValue = rows[row]
+    let columnValue = columns[column]
+    print("\(rowValue) -> \(columnValue)")
+}
+````
     
 > **IMPORTANT**: For customizations see the [example](https://github.com/hemangshah/Feelings/blob/master/Feelings/Feelings/ViewController.swift).
 
